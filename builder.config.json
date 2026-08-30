@@ -1,0 +1,147 @@
+{
+  "appId": "com.kira.solver",
+  "productName": "Kira Solver",
+  "files": [
+    "dist/**/*",
+    {
+      "from": "dist-electron",
+      "to": "."
+    },
+    "package.json"
+  ],
+  "directories": {
+    "output": "release",
+    "buildResources": "assets"
+  },
+  "asar": true,
+  "compression": "maximum",
+  "generateUpdatesFilesForAllChannels": true,
+  "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+  "copyright": "Copyright © 2026 Kira Solver. All rights reserved.",
+  "buildVersion": "2.0.2",
+
+  "mac": {
+    "category": "public.app-category.productivity",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "artifactName": "${productName}-${version}-macOS-${arch}.${ext}",
+    "icon": "./electron/assets/logo.icns",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false,
+    "identity": null,
+    "notarize": false,
+    "protocols": [
+      {
+        "name": "Kira Solver",
+        "schemes": ["kira-solver"]
+      }
+    ],
+    "darkModeSupport": true,
+    "minimumSystemVersion": "10.14.0",
+    "type": "distribution"
+  },
+
+  "dmg": {
+    "title": "${productName} ${version}",
+    "icon": "./electron/assets/logo.icns",
+    "iconSize": 80,
+    "window": {
+      "width": 540,
+      "height": 380
+    },
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ],
+    "format": "ULFO"
+  },
+
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "./electron/assets/logo.ico",
+    "artifactName": "${productName}-${version}-Windows-${arch}.${ext}",
+    "protocols": [
+      {
+        "name": "Kira Solver",
+        "schemes": ["kira-solver"]
+      }
+    ],
+    "requestedExecutionLevel": "asInvoker",
+    "verifyUpdateCodeSignature": false
+  },
+
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "${productName}",
+    "installerIcon": "./electron/assets/logo.ico",
+    "uninstallerIcon": "./electron/assets/logo.ico",
+    "installerHeaderIcon": "./electron/assets/logo.ico",
+    "license": "LICENSE.txt",
+    "language": "1033"
+  },
+
+  "portable": {
+    "artifactName": "${productName}-${version}-Portable.${ext}"
+  },
+
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "https://download.kirasolver.com/release-windows-latest",
+      "channel": "latest"
+    },
+    {
+      "provider": "generic",
+      "url": "https://download.kirasolver.com/release-macos-latest",
+      "channel": "latest-mac"
+    }
+  ],
+
+  "extraResources": [
+    {
+      "from": "electron/assets",
+      "to": "assets",
+      "filter": ["**/*"]
+    }
+  ],
+
+  "extraMetadata": {
+    "main": "main.js",
+    "homepage": "https://kirasolver.com",
+    "author": {
+      "name": "Kira Technologies",
+      "email": "support@kirasolver.com"
+    }
+  },
+
+  "buildDependenciesFromSource": false,
+  "nodeGypRebuild": false,
+  "npmRebuild": true,
+
+  "electronDownload": {
+    "mirror": "https://npmmirror.com/mirrors/electron/"
+  }
+}

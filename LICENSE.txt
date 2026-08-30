@@ -1,0 +1,52 @@
+END USER LICENSE AGREEMENT (EULA)
+=================================
+
+Software: KIRA SOLVER
+Copyright © 2025 Kira Technologies. All rights reserved.
+
+IMPORTANT — PLEASE READ CAREFULLY:
+By installing, copying, or using this software, you accept and agree to be bound by the terms of this agreement.  
+If you do not agree, do not install or use KIRA SOLVER.
+
+---------------------------------
+1. ABOUT KIRA SOLVER
+---------------------------------
+Kira Solver is an advanced AI-powered assistant designed to help you excel in technical interviews. It delivers instant solutions for coding challenges, interprets MCQs from screenshots, and offers live chat support—all while remaining completely undetectable..  
+It provides support through the following features:
+  
+* Code Assistant: Take a screenshot of code and receive the solution, explanation, or analysis.  
+* MCQ Solver: Capture multiple-choice questions and get the correct answer with detailed explanation.  
+* AI Chat: Ask any question and receive intelligent, conversational responses.  
+
+
+---------------------------------
+2. USER RESPONSIBILITIES
+---------------------------------
+* Permitted Use:  
+  You may use KIRA SOLVER for personal learning, interview preparation, or productivity enhancement.
+
+* Prohibited Use / Liability Clause:  
+  If you use this software during live interviews, tests, or assessments and are caught, you alone are fully responsible for any resulting consequences (such as disqualification, rejection, or disciplinary action).  
+  Kira Technologies does not encourage misuse and will not be held liable for how you choose to operate the software.
+
+---------------------------------
+3. LIMITATION OF LIABILITY
+---------------------------------
+In no event shall Kira Technologies be liable for any damages, including but not limited to job loss, interview rejection, or penalties arising from your use or misuse of this software.
+
+---------------------------------
+4. TERMINATION
+---------------------------------
+This agreement remains in effect until terminated. It terminates automatically if you fail to comply with the terms. Upon termination, you must stop using the software and remove all copies.
+
+---------------------------------
+5. CONTACT INFORMATION
+---------------------------------
+For support or questions:
+Email: support@kirasolver.com  
+Website: https://kirasolver.com
+
+---------------------------------
+ACCEPTANCE
+---------------------------------
+By clicking "I Agree," or by installing or using KIRA SOLVER, you confirm that you have read, understood, and agree to the terms of this agreement.

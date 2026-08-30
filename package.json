@@ -1,0 +1,71 @@
+{
+  "name": "kira-solver",
+  "private": true,
+  "version": "2.0.2",
+  "description": "Kira Solver: Your stealthy AI interview sidekick 🤖💡 — effortlessly cracks coding challenges and MCQs in real-time, all while staying completely under the radar during live interviews",
+  "author": {
+    "name": "Kira",
+    "email": "support@kirasolver.com"
+  },
+  "keywords": [
+    "kira",
+    "solver",
+    "ai",
+    "interview",
+    "helper",
+    "coding",
+    "mcq",
+    "problems",
+    "undetectable",
+    "live",
+    "coding-interviews",
+    "AI Chat"
+  ],
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder --config builder.config.json",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "clean": "rimraf dist dist-electron release"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.20",
+    "katex": "^0.18.2",
+    "openai": "^7.4.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.1",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/katex": "^0.16.8",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@vitejs/plugin-react": "^6.0.5",
+    "autoprefixer": "^10.5.4",
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.9.0",
+    "postcss": "^8.5.26",
+    "rimraf": "^6.1.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.66.0",
+    "vite": "^8.2.1",
+    "vite-plugin-electron": "^1.1.1",
+    "vite-plugin-electron-renderer": "^1.0.0"
+  }
+}

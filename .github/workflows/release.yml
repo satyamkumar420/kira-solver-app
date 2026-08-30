@@ -1,0 +1,105 @@
+name: Release 🚀
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: 📥 Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: ⚡ Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Install dependencies
+        run: npm ci --prefer-offline --no-audit
+
+      - name: 🧹 Clean previous builds
+        run: npm run clean
+
+      - name: 🛠️ Build application
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" ]]; then
+            npm run build
+          elif [[ "$RUNNER_OS" == "macOS" ]]; then
+            npm run build
+          else
+            npm run build
+          fi
+        shell: bash
+
+      - name: 📤 Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.os }}
+          path: release/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 📥 Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release
+
+      - name: 🛠️ Install rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+
+      - name: 🔐 Configure R2
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "[r2]" > ~/.config/rclone/rclone.conf
+          echo "type = s3" >> ~/.config/rclone/rclone.conf
+          echo "provider = Cloudflare" >> ~/.config/rclone/rclone.conf
+          echo "access_key_id = ${{ secrets.R2_ACCESS_KEY_ID }}" >> ~/.config/rclone/rclone.conf
+          echo "secret_access_key = ${{ secrets.R2_SECRET_ACCESS_KEY }}" >> ~/.config/rclone/rclone.conf
+          echo "endpoint = ${{ secrets.R2_ENDPOINT }}" >> ~/.config/rclone/rclone.conf
+          echo "region = auto" >> ~/.config/rclone/rclone.conf
+
+      - name: 📝 List downloaded files
+        run: ls -R release
+
+      - name: 📦 Zip installer files
+        run: |
+          cd release
+          for file in *.exe *.dmg *.AppImage *.deb; do
+            if [ -f "$file" ]; then
+              zip "${file%.*}.zip" "$file"
+            fi
+          done
+
+      - name: 📝 List zipped files
+        run: ls -R release
+
+      - name: ☁️ Upload artifacts to R2
+        run: |
+          rclone copy release/ r2:kirasolver-updates/ \
+            --include "Kira Solver-*.exe" \
+            --include "Kira Solver-*.exe.zip" \
+            --include "latest*.yml" \
+            --include "*.dmg" \
+            --include "*.dmg.zip" \
+            --include "*.AppImage" \
+            --include "*.AppImage.zip" \
+            --progress
