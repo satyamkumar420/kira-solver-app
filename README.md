@@ -1,12 +1,32 @@
-# ⚡ KIRA SOLVER 🤖
+<div align="center">
 
-> **Your Stealthy AI Coding & Interview Sidekick** — Effortlessly cracks coding problems, multiple-choice questions (MCQs), and conceptual queries in real-time with vision screenshot intelligence.
+  <img src="public/logo.jpg" alt="Kira Solver Logo" width="120" style="border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" />
+
+  # ⚡ KIRA SOLVER 🤖
+
+  <p align="center">
+    <strong>Your Stealthy AI Coding & Interview Sidekick</strong><br />
+    <em>Effortlessly cracks coding challenges, MCQs, and technical problems in real-time with Vision AI intelligence.</em>
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/satyamkumar420/kira-solver-app/releases"><img src="https://img.shields.io/github/v/release/satyamkumar420/kira-solver-app?color=blue&style=for-the-badge&logo=github" alt="Release" /></a>
+    <img src="https://img.shields.io/badge/OpenAI-Compatible-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI Compatible" />
+    <img src="https://img.shields.io/badge/Electron-43.3-47848F?style=for-the-badge&logo=electron&logoColor=white" alt="Electron" />
+    <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+    <img src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Platform" />
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+  </p>
+
+</div>
 
 ---
 
 ## 🌟 Key Features
 
-- **🌐 OpenAI-Compatible Architecture**: Connect to **any** OpenAI-compatible provider:
+- **🌐 Universal OpenAI-Compatible Support**: Connect to any OpenAI-compatible provider:
   - **OpenAI** (`https://api.openai.com/v1`)
   - **OpenRouter** (`https://openrouter.ai/api/v1`)
   - **Groq** (`https://api.groq.com/openai/v1`)
