@@ -25,7 +25,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment variables
+# Environment variables & Local config
 .env
 /release
 /.env.local
+kira_settings.json
