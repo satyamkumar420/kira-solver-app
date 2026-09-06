@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="40%" stop-color="#0d111d" />
+      <stop offset="80%" stop-color="#0a0e1a" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+
+    <!-- Outer Border Glow -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#4facfe" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#e0f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Accent Gradient Cyan-Purple -->
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Card Border -->
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-bolt" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-badge" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Background Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.18" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.2" />
+    </pattern>
+  </defs>
+
+  <style>
+    .font-sans { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace; }
+  </style>
+
+  <!-- Base Card with Clipping -->
+  <clipPath id="rounded-box">
+    <rect width="1200" height="420" rx="24" />
+  </clipPath>
+
+  <g clip-path="url(#rounded-box)">
+    <!-- Deep Cosmic Dark Background -->
+    <rect width="1200" height="420" fill="url(#bg-grad)" />
+
+    <!-- Grid Overlay -->
+    <rect width="1200" height="420" fill="url(#grid)" />
+
+    <!-- Ambient Glowing Nebulas -->
+    <circle cx="150" cy="110" r="180" fill="#00f2fe" fill-opacity="0.14" filter="url(#glow-cyan)" />
+    <circle cx="680" cy="80" r="220" fill="#3b82f6" fill-opacity="0.10" filter="url(#glow-cyan)" />
+    <circle cx="1060" cy="160" r="220" fill="#8b5cf6" fill-opacity="0.15" filter="url(#glow-cyan)" />
+    <circle cx="400" cy="380" r="160" fill="#06b6d4" fill-opacity="0.08" filter="url(#glow-cyan)" />
+
+    <!-- Cyber Circuit Accents -->
+    <path d="M 0 80 L 180 80 L 220 120" stroke="#00f2fe" stroke-width="1.2" stroke-opacity="0.35" fill="none" />
+    <path d="M 1200 120 L 1080 120 L 1050 90 L 890 90" stroke="#8b5cf6" stroke-width="1.2" stroke-opacity="0.35" fill="none" />
+    <circle cx="220" cy="120" r="3" fill="#00f2fe" fill-opacity="0.8" />
+    <circle cx="890" cy="90" r="3" fill="#8b5cf6" fill-opacity="0.8" />
+    <path d="M 1120 340 L 1160 340 L 1180 360" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" fill="none" />
+
+    <!-- ==================== LEFT LOGO EMBLEM ==================== -->
+    <g transform="translate(68, 54)">
+      <!-- Outer Glow Orb -->
+      <rect x="0" y="0" width="146" height="146" rx="34" fill="url(#accent-grad)" fill-opacity="0.16" filter="url(#glow-cyan)" />
+      
+      <!-- Icon Glass Container -->
+      <rect x="0" y="0" width="146" height="146" rx="34" fill="#0b101d" fill-opacity="0.88" stroke="url(#border-grad)" stroke-width="2" />
+
+      <!-- Concentric Cyber Rings -->
+      <circle cx="73" cy="73" r="54" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 6" fill="none" />
+      <circle cx="73" cy="73" r="42" stroke="#8b5cf6" stroke-width="1.2" stroke-opacity="0.4" fill="none" />
+
+      <!-- Hexagonal Target / Iris -->
+      <polygon points="73,37 104,55 104,91 73,109 42,91 42,55" stroke="url(#accent-grad)" stroke-width="2" fill="#1e1b4b" fill-opacity="0.5" />
+
+      <!-- High-Tech Central Lightning Bolt -->
+      <path d="M 76 45 L 56 74 L 71 74 L 67 101 L 91 69 L 75 69 Z" fill="url(#title-grad)" filter="url(#glow-bolt)" />
+      <path d="M 76 45 L 56 74 L 71 74 L 67 101 L 91 69 L 75 69 Z" fill="#ffffff" />
+    </g>
+
+    <!-- ==================== MAIN HEADER CONTENT ==================== -->
+    <!-- Top Pill / Status Badge -->
+    <g transform="translate(245, 54)">
+      <rect x="0" y="0" width="280" height="30" rx="15" fill="#1e1b4b" fill-opacity="0.85" stroke="#6366f1" stroke-width="1.2" />
+      <circle cx="15" cy="15" r="4.5" fill="#10b981" filter="url(#glow-badge)" />
+      <text x="28" y="20" class="font-mono" font-size="11" font-weight="700" fill="#c7d2fe" letter-spacing="1.8">STEALTH VISION AI • v2.0</text>
+    </g>
+
+    <!-- Provider Compatibility Tags -->
+    <g transform="translate(540, 54)">
+      <rect x="0" y="0" width="370" height="30" rx="15" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <text x="16" y="19" class="font-mono" font-size="11" font-weight="600" fill="#94a3b8">
+        <tspan fill="#38bdf8">OPENAI</tspan> • <tspan fill="#a78bfa">CLAUDE</tspan> • <tspan fill="#f59e0b">GEMINI</tspan> • <tspan fill="#10b981">OLLAMA</tspan>
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(245, 134)">
+      <text class="font-sans" font-size="54" font-weight="900" letter-spacing="1.5" fill="url(#title-grad)">
+        KIRA SOLVER
+      </text>
+      <!-- Stealth Sub-badge beside title -->
+      <rect x="400" y="-40" width="105" height="26" rx="8" fill="#ef4444" fill-opacity="0.18" stroke="#ef4444" stroke-width="1" />
+      <text x="414" y="-23" class="font-mono" font-size="11" font-weight="700" fill="#fca5a5" letter-spacing="1">UNDETECTED</text>
+    </g>
+
+    <!-- Tagline -->
+    <g transform="translate(246, 168)">
+      <text class="font-sans" font-size="20" font-weight="600" fill="#f1f5f9">
+        Your Stealthy AI Coding &amp; Interview Sidekick 🤖⚡
+      </text>
+    </g>
+
+    <!-- Description -->
+    <g transform="translate(246, 196)">
+      <text class="font-sans" font-size="14.5" font-weight="400" fill="#94a3b8">
+        Real-time Vision OCR analysis • Solves complex DSA &amp; MCQs instantly • Ghost-mode hotkeys
+      </text>
+    </g>
+
+    <!-- ==================== BOTTOM FEATURE CARDS ==================== -->
+    
+    <!-- Card 1: Vision AI Solver -->
+    <g transform="translate(68, 260)">
+      <rect width="248" height="114" rx="18" fill="url(#card-grad)" stroke="url(#card-border)" stroke-width="1.2" />
+      <!-- Icon Container -->
+      <rect x="18" y="18" width="40" height="40" rx="12" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1" />
+      <!-- Camera/Vision Icon SVG -->
+      <path d="M 33 34 L 35 30 L 41 30 L 43 34 L 47 34 C 48.1 34 49 34.9 49 36 L 49 44 C 49 45.1 48.1 46 47 46 L 29 46 C 27.9 46 27 45.1 27 44 L 27 36 C 27 34.9 27.9 34 29 34 Z" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round" />
+      <circle cx="38" cy="40" r="4.5" stroke="#38bdf8" stroke-width="1.8" fill="none" />
+      
+      <!-- Text -->
+      <text x="68" y="36" class="font-sans" font-size="15" font-weight="700" fill="#f8fafc">Vision AI Solver</text>
+      <text x="68" y="52" class="font-mono" font-size="11" font-weight="600" fill="#38bdf8">Ctrl + H / Ctrl + Enter</text>
+      <text x="18" y="85" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">Instant screen capture &amp;</text>
+      <text x="18" y="101" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">multimodal question parsing</text>
+    </g>
+
+    <!-- Card 2: Dual DSA & MCQ Engine -->
+    <g transform="translate(342, 260)">
+      <rect width="248" height="114" rx="18" fill="url(#card-grad)" stroke="url(#card-border)" stroke-width="1.2" />
+      <!-- Icon Container -->
+      <rect x="18" y="18" width="40" height="40" rx="12" fill="#8b5cf6" fill-opacity="0.25" stroke="#a78bfa" stroke-width="1" />
+      <!-- Code Brackets Icon -->
+      <path d="M 34 33 L 28 38 L 34 43 M 42 33 L 48 38 L 42 43 M 39 31 L 37 45" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+      <!-- Text -->
+      <text x="68" y="36" class="font-sans" font-size="15" font-weight="700" fill="#f8fafc">DSA &amp; MCQ Engine</text>
+      <text x="68" y="52" class="font-mono" font-size="11" font-weight="600" fill="#a78bfa">Optimal + Complexity</text>
+      <text x="18" y="85" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">Time &amp; space complexity,</text>
+      <text x="18" y="101" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">edge cases &amp; option reasoning</text>
+    </g>
+
+    <!-- Card 3: Ghost Stealth Controls -->
+    <g transform="translate(616, 260)">
+      <rect width="248" height="114" rx="18" fill="url(#card-grad)" stroke="url(#card-border)" stroke-width="1.2" />
+      <!-- Icon Container -->
+      <rect x="18" y="18" width="40" height="40" rx="12" fill="#10b981" fill-opacity="0.25" stroke="#34d399" stroke-width="1" />
+      <!-- Shield / Stealth Icon -->
+      <path d="M 38 29 L 47 33 C 47 40 43 45 38 48 C 33 45 29 40 29 33 Z" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M 34 38 L 37 41 L 43 35" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+      <!-- Text -->
+      <text x="68" y="36" class="font-sans" font-size="15" font-weight="700" fill="#f8fafc">Ghost Stealth Mode</text>
+      <text x="68" y="52" class="font-mono" font-size="11" font-weight="600" fill="#34d399">Ctrl + B / Arrow Keys</text>
+      <text x="18" y="85" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">Instant hide/show &amp; stealth</text>
+      <text x="18" y="101" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">window repositioning</text>
+    </g>
+
+    <!-- Card 4: Universal AI Gateway -->
+    <g transform="translate(890, 260)">
+      <rect width="244" height="114" rx="18" fill="url(#card-grad)" stroke="url(#card-border)" stroke-width="1.2" />
+      <!-- Icon Container -->
+      <rect x="18" y="18" width="40" height="40" rx="12" fill="#f59e0b" fill-opacity="0.25" stroke="#fbbf24" stroke-width="1" />
+      <!-- Globe / AI Mesh Icon -->
+      <circle cx="38" cy="38" r="9" stroke="#fbbf24" stroke-width="1.8" fill="none" />
+      <path d="M 29 38 Q 38 33 47 38 M 29 38 Q 38 43 47 38 M 38 29 C 34 34 34 42 38 47 M 38 29 C 42 34 42 42 38 47" stroke="#fbbf24" stroke-width="1.4" fill="none" />
+
+      <!-- Text -->
+      <text x="68" y="36" class="font-sans" font-size="15" font-weight="700" fill="#f8fafc">Any AI Provider</text>
+      <text x="68" y="52" class="font-mono" font-size="11" font-weight="600" fill="#fbbf24">OpenAI-Compatible</text>
+      <text x="18" y="85" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">Bring your own key, local</text>
+      <text x="18" y="101" class="font-sans" font-size="12" font-weight="400" fill="#94a3b8">Ollama, Groq, or DeepSeek</text>
+    </g>
+  </g>
+
+  <!-- Outer Neon Glowing Border -->
+  <rect x="1" y="1" width="1198" height="418" rx="23" stroke="url(#border-grad)" stroke-width="2" fill="none" />
+</svg>

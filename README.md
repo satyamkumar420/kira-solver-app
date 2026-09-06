@@ -1,13 +1,6 @@
 <div align="center">
 
-  <img src="public/logo.jpg" alt="Kira Solver Logo" width="120" style="border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" />
-
-  # ⚡ KIRA SOLVER 🤖
-
-  <p align="center">
-    <strong>Your Stealthy AI Coding & Interview Sidekick</strong><br />
-    <em>Effortlessly cracks coding challenges, MCQs, and technical problems in real-time with Vision AI intelligence.</em>
-  </p>
+  <img src="./banner.svg" alt="Kira Solver - Your Stealthy AI Coding & Interview Sidekick" width="100%" style="border-radius: 16px; margin-bottom: 16px;" />
 
   <p align="center">
     <a href="https://github.com/satyamkumar420/kira-solver-app/releases"><img src="https://img.shields.io/github/v/release/satyamkumar420/kira-solver-app?color=blue&style=for-the-badge&logo=github" alt="Release" /></a>
