@@ -17,7 +17,7 @@
     <img src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
     <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Platform" />
-    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+    <a href="https://buymeacoffee.com/satyam404"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
   </p>
 
 </div>
@@ -33,7 +33,7 @@
   - **DeepSeek** (`https://api.deepseek.com/v1`)
   - **Local Ollama / vLLM / LM Studio** (`http://localhost:11434/v1`)
   - **Custom AI Gateways & Routers**
-- **🔍 Auto-Fetch Models & Custom Input**:
+- **🔍 Auto-Fetch Models & Vision Presets**:
   - Automatically fetch and list available models from your configured provider with one click.
   - Type or paste **any custom model ID** directly if not in the list.
   - Quick 1-click vision model presets (`gpt-4o`, `gpt-4o-mini`, `gemini-2.5-flash`, `claude-3.5-sonnet`, `qwen-vl`).
@@ -41,14 +41,14 @@
   - Capture any area of your screen instantly using global shortcuts.
   - Automatically extracts code problems or MCQs from images and solves them with step-by-step logic, complexity analysis, and correct options.
 - **📑 Multi-View Workflow**:
-  - **Code Solver**: Provides optimal and brute-force DSA solutions with time/space complexity and detailed thoughts.
+  - **Code Solver**: Provides optimal and brute-force DSA solutions with time/space complexity, edge cases, and detailed thoughts.
   - **MCQ Solver**: Extracts multiple-choice questions, highlights the correct answer, and explains all choices.
-  - **Chat Assistant**: Interactive streaming conversation with the AI for explanations and follow-ups.
+  - **Chat Assistant**: Interactive streaming conversation with the AI for explanations, hints, and follow-ups.
 - **🕒 Unified History & Persistence**:
   - All past sessions, codes, and MCQs are automatically saved and organized locally.
-  - Search and filter history anytime (`Ctrl + R` for fresh session).
+  - Search and filter history anytime (`Ctrl + R` for a fresh session).
 - **🥷 Stealth & Window Controls**:
-  - Global shortcuts to move window, toggle visibility, and control tabs stealthily.
+  - Global shortcuts to move window, toggle visibility, and control tabs stealthily without breaking interview focus.
 
 ---
 
@@ -142,6 +142,39 @@ The compiled setup installer `.exe` will be generated inside the `release/` fold
 
 ---
 
+## 👤 Author & Maintainer
+
+**Satyam Kumar**
+- **GitHub:** [@satyamkumar420](https://github.com/satyamkumar420)
+- **LinkedIn:** [satyamkumar404](https://www.linkedin.com/in/satyamkumar404/)
+- **Email:** [satyamkumar2460@gmail.com](mailto:satyamkumar2460@gmail.com)
+
+---
+
+## ☕ Support & Sponsor
+
+If you find this project helpful and want to support its maintenance and ongoing development:
+
+<div align="center">
+
+<a href="https://buymeacoffee.com/satyam404" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="200" />
+</a>
+
+<br/><br/>
+
+<a href="https://buymeacoffee.com/satyam404" target="_blank">
+  <img src="./bmc_qr.png" alt="Scan to Buy Me A Coffee" width="170" style="border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
+</a>
+
+<br/>
+
+<sub>Scan the QR code or click the button above to buy me a coffee! Thank you for your support! ☕✨</sub>
+
+</div>
+
+---
+
 ## 📄 License
 
-This project is licensed under the MIT License — see the [LICENSE.txt](LICENSE.txt) file for details.
+This project is licensed under the terms described in the [LICENSE.txt](LICENSE.txt) file.
